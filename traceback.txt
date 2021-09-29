@@ -1,0 +1,26 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/assets/scenes/scene4.rpy", line 354, in script
+    show j_neutral at c_left
+Exception: Character expects its what argument to be a string, got <<ImageReference (u'j_neutral',)> at 6230f70>.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/assets/scenes/scene4.rpy", line 354, in script
+    show j_neutral at c_left
+  File "C:\Users\Donobuz\Downloads\renpy-7.4.8-sdk/renpy/ast.py", line 1192, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\Donobuz\Downloads\renpy-7.4.8-sdk/renpy/ast.py", line 1162, in show_imspec
+    atl=atl)
+  File "C:\Users\Donobuz\Downloads\renpy-7.4.8-sdk/renpy/exports.py", line 756, in show
+    img = i(img)
+  File "C:\Users\Donobuz\Downloads\renpy-7.4.8-sdk/renpy/character.py", line 1144, in __call__
+    raise Exception("Character expects its what argument to be a string, got %r." % (what,))
+Exception: Character expects its what argument to be a string, got <<ImageReference (u'j_neutral',)> at 6230f70>.
+
+Windows-10-10.0.19041
+Ren'Py 7.4.8.1895
+RoughDraft 1.0
+Mon Sep 27 23:20:29 2021

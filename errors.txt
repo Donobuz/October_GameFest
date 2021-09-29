@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/assets/scenes/scene4.rpy", line 384: Line is indented, but the preceding scene statement statement does not expect a block. Please check this line's indentation.
+    $ renpy.pause(5.0, hard=True)
+    ^
+
+Ren'Py Version: Ren'Py 7.4.8.1895
+Tue Sep 28 03:58:01 2021
