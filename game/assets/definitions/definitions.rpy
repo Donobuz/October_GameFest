@@ -42,8 +42,8 @@ init:
 
 
     # image definitions
-    image sun = "../game/assets/images/sun.jpg"
 
+    #images
     image blackscreen = "../game/assets/images/blackscreen.png"
 
     image tempbkgrd = "../game/assets/images/tempbkgrd.png"
@@ -72,9 +72,8 @@ init:
 
     image party = "../game/assets/images/Backgrounds/party.png"
 
-    image my_movie = Movie(channel="movie", play="../game/assets/movie/phonebooth.mpeg")
-
     image forest_dark = "../game/assets/images/Backgrounds/forest_dark.png"
+
     image forest_day = "../game/assets/images/Backgrounds/forest_day.png"
 
     image winner_panther = "../game/assets/images/Backgrounds/winner cat.jpg"
@@ -82,6 +81,10 @@ init:
     image winner_cup = "../game/assets/images/Backgrounds/winner cup.jpg"
 
     image winner_truper = "../game/assets/images/Backgrounds/winner ranger.jpg"
+
+
+    # cutscenes
+    image my_movie = Movie(channel="movie", play="../game/assets/movie/phonebooth.mpeg")
 
     # MC Costumes
     image cup = "../game/assets/images/Costumes/cup.png"

@@ -2,17 +2,9 @@ label scene_party:
 
 
     if stay_calm >= 3:
-        $print("Number of freakouts:")
-        $print(freak_out)
-        $print("Number of Calm:")
-        $print(stay_calm)
         jump winner
 
     elif freak_out >= 3:
-        $print("Number of freakouts:")
-        $print(freak_out)
-        $print("Number of Calm:")
-        $print(stay_calm)
         jump loser
 
 label winner:
@@ -272,9 +264,12 @@ label winner:
 
         t_right "We need to go to the stage now." with text_dissolve
 
+
         show t_annoyed at offscreenright
         show j_neutral at offscreenleft
         with dict_emotion_change
+
+        "Tanner turns away from Jesse" with text_dissolve
 
     show s_happy at left
     with moveinleft
@@ -375,8 +370,6 @@ label winner:
     return
 
 
-    
-
 
 
 
@@ -470,3 +463,260 @@ label loser:
     with dict_ease
 
     "You scan the area, looking for Camilla." with text_dissolve
+
+    "When you spot her, she's doubled over next to Tanner and Sequinn." with text_dissolve
+
+    show j_annoyed at left
+    with moveinleft
+
+    j_left "No way! They made it first... ugh. I'm not ready to hear it." with text_dissolve
+
+    show j_annoyed at offscreenleft
+    with dict_emotion_change
+
+    "You and Jesse make your way over to them." with text_dissolve
+
+    show t_happy at right
+    with moveinright
+
+    t_right "Heh... the Dude Scouts would be very dissapointed." with text_dissolve
+
+    show s_happy at left
+    with moveinleft
+
+    s_left "Glad to see you finally made it. We were going to send a search party after you soon." with text_dissolve
+
+    show t_happy at offscreenright
+    show j_annoyed at right
+    with dict_emotion_change
+
+    j_right "You two are real cute..." with text_dissolve
+
+    mc "Well I for one, am happy to know you two made it out just fine." with text_dissolve
+
+    s_left "Just fine is an understatement." with text_dissolve
+
+    show s_happy at offscreenleft
+    show t_happy at left
+    with dict_emotion_change
+
+    t_left "Hey, Jesse." with text_dissolve
+
+    j_right "What do you want, Tanner?" with text_dissolve
+
+    show t_happy at offscreenright
+    show j_annoyed at offscreenleft
+    with dict_emotion_change
+
+    "Sequinn points in the direction you came from." with text_dissolve
+
+    show s_neutral at left
+    with dict_emotion_change
+
+    s_left "Uh huh, so you know how we came through there?" with text_dissolve
+
+    mc "Yeah, I'd rather not think about that... Thanks." with text_dissolve
+
+    show t_neutral at right
+    with moveinright
+
+    t_right "That was a back route." with text_dissolve
+
+    show t_neutral at offscreenright
+    show c_neutral at right
+    with dict_emotion_change
+
+    c_right "A back route?!" with text_dissolve
+
+    s_left "Yeah, where naturists and hunters go through for nature... and shit." with text_dissolve
+
+    show s_neutral at offscreenleft
+    show c_neutral at offscreenright
+    with dict_emotion_change
+
+    "Tanner points in the opposite direction." with text_dissolve
+
+    show t_neutral at right
+    with dict_emotion_change
+    t_right "{b}{i}That's{/i}{/b} the fucking front entrance." with text_dissolve
+
+    show j_annoyed at left
+    with dict_emotion_change
+
+    j_left "No fucking way. You're lying." with text_dissolve
+
+    show j_annoyed at offscreenleft
+    show t_neutral at offscreenright
+    with dict_emotion_change
+
+    "You’re already heading to where he was pointing, ready for the disappointment to hit you." with text_dissolve
+
+    "A parking lot..." with text_dissolve
+
+    "... filled with cars." with text_dissolve
+
+    "... right next to the road." with text_dissolve
+
+    "{i}{b}Well Shit{/b}{/i}" with text_dissolve
+
+    "Jesse walks up right next to you." with text_dissolve
+
+    show j_angry at left
+    with moveinleft
+
+    j_left "First we make it here last, and then we went through the BACK ENTRANCE??"
+
+    show j_neutral at left
+    with dict_emotion_change
+
+    hide j_angry
+
+    "Jesse takes a deep breath." with text_dissolve
+
+    j_left "I don't even want to think about it anymore." with text_dissolve
+
+    mc "I am here for you in these harrowing times." with text_dissolve
+
+    show j_neutral at offscreenleft
+    with dict_emotion_change
+
+    "You put an arm around Jesse as the two of you head back to the group." with text_dissolve
+    "Tanner’s usual frown deepens after seeing the two of you." with text_dissolve
+
+    "You didn’t know it was possible to make a frown…frownier." with text_dissolve
+
+    show j_neutral at left
+    with moveinleft
+
+    j_left "Tanner..." with text_dissolve
+
+    show t_annoyed at right
+    with moveinright
+
+    t_right "Even Henry has a better sense of direction than you." with text_dissolve
+
+    if routeA_scene3_choice == "both idiots":
+        j_left "Look, can we please just talk?" with text_dissolve
+
+        t_right "What is there to talk about bro? You ditch me for some pretty boy ever time we make plans." with text_dissolve
+
+        j_left "You’re right, and I apologize. You’re my best friend and my first friend. I just want to talk." with text_dissolve
+
+        "{b}IT’S TIME FOR THE ANNUAL COSTUME COMPETITION.{/b}" with text_dissolve
+
+        "{b}WILL ALL  THE CONTESTANTS PLEASE GO TO THE STAGE BESIDE THE BONFIRE SO WE CAN GET THE SHOW STARTED!{/b}" with text_dissolve
+
+        show t_neutral at right
+        with dict_emotion_change
+        hide t_annoyed
+
+        t_right "Let's support our eccentric friend first." with text_dissolve
+
+        show j_happy at left
+        with dict_emotion_change
+        hide j_neutral
+
+        j_left "You have a deal Tan Tan." with text_dissolve
+
+        t_right "Watch it..." with text_dissolve
+
+        mc "Glad you guys could make up but we need to go. Sequin is freaking out and they could use some reassurance." with text_dissolve
+
+        show j_happy at offscreenleft
+        show t_neutral at offscreenright
+        with dict_emotion_change
+
+    else:
+        "Just as Jesse was about to speak, the host of the costume compeition started speaking..." with text_dissolve
+
+        "{b}IT’S TIME FOR THE ANNUAL COSTUME COMPETITION.{/b}" with text_dissolve
+
+        "{b}WILL ALL  THE CONTESTANTS PLEASE GO TO THE STAGE BESIDE THE BONFIRE SO WE CAN GET THE SHOW STARTED!{/b}" with text_dissolve
+
+        t_right "We need to go to the stage now." with text_dissolve
+
+        show t_annoyed at offscreenright
+        show j_neutral at offscreenleft
+        with dict_emotion_change
+
+        "Tanner turns away from Jesse." with text_dissolve
+    
+    show s_happy at left
+    with moveinleft
+
+    s_left "That's my cue! This is {b}{i}my{/i}{/b} moment." with text_dissolve
+
+    show s_happy at offscreenleft
+    with dict_emotion_change
+
+    "Sequinn starts to make their way forward to the stage, but hesitates." with text_dissolve
+
+    "Suddenly Tanner walks over to you." with text_dissolve
+
+    show t_neutral at right
+    with moveinright
+
+    t_right "What's the hold up, [main_char]?" with text_dissolve
+
+    mc "I… I think they’re nervous? I’m not really sure. I’ve never seen this emotion come out of them..." with text_dissolve
+
+    t_right "Hey! I need you and your weird Furkey ass to get on the stage. Or do you want Veronica to win again?" with text_dissolve
+
+    show s_angry at left
+    with moveinleft
+
+    s_left "Veronica will not get her sexy fingers on this year's trophy!" with text_dissolve
+
+    t_right "Uh... right..." with text_dissolve
+
+    show t_neutral at offscreenright
+    show s_angry at offscreenleft
+    with dict_emotion_change
+
+    "Tanner guides the group towards the stage to support your friend." with text_dissolve
+
+    show c_happy at right
+    with dict_emotion_change
+
+    c_right "You can do this Quinny!" with text_dissolve
+
+    mc "We're rooting for you!" with text_dissolve
+
+    show j_happy at left
+    with moveinleft
+
+    j_left "You look amazing up there!" with text_dissolve
+
+    show c_happy at offscreenright
+    show j_happy at offscreenleft
+    with dict_emotion_change
+
+    "Sequinn walks across the stage and powers on her costume. The lights and sound takes the crowd by surprise and they all cheer for them!" with text_dissolve
+
+    "{b}AND THE WINNER IS SEQUINN SHEU AND THEIR FURKEY COSTUME!{/b}" with text_dissolve
+
+    show s_happy at left
+    with dict_emotion_change
+
+    s_left "HELL YES!" with hpunch
+
+    show s_happy at offscreenleft
+    with dict_emotion_change
+
+    "You and your friends run up to Sequinn for a well deserved congratulations." with text_dissolve
+
+    "One of the organizers walks up to your group asking to take a picture of you all." with text_dissolve
+
+    "You pose with all your friends which now includes Sequinn's trophy." with text_dissolve
+
+    "*CLICK*" with flash
+
+    "You and your friends enjoy the rest of the night, feeling silly for being afraid in the first place." with text_dissolve
+
+    "There was nothing to fear..." with text_dissolve
+
+    "Right?" with text_dissolve
+
+    # INSERT IMAGE OF SCRAPPY KILLER
+
+    return

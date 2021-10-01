@@ -294,7 +294,9 @@ label scene2continue:
 
     show t_annoyed at left
     with dict_hpunch
-    "Turkey Noise!!!!!!!!!!!!" #Edit this later
+    play sound "assets/music/turkey_win.mp3" volume .75 #Edit this later
+
+    $ renpy.pause(1.5, hard = True)
     
     "The loud noise causes everyone to jump and cover their ears" with text_dissolve
     

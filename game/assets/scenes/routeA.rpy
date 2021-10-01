@@ -1017,7 +1017,9 @@ label scene5_routeA:
 
     mc "Oh, come on Cami. Eventually you will need to get over all this fear. It's nothing!" with text_dissolve
 
-    #PLAY GHOST SCREAM HERE
+    play sound "assets/music/ghost_scream.ogg" volume 0.75
+
+    $ renpy.pause (0.20, hard = True)
 
     show j_terrified at left
     show c_terrified at right
@@ -1048,7 +1050,7 @@ label scene5_routeA:
     show j_terrified at left
     with moveinleft
 
-    #PLAY DIGITAL SCREAM
+    play sound "assets/music/digitalscream.ogg" volume 0.5
     
     j_left "You pissed it off!" with text_dissolve
 

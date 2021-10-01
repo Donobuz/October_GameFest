@@ -32,7 +32,7 @@ label scene3:
 
     "Camilla clicks the radio on and changes it to a station."
     play sound "<from 2 to 4>../game/assets/music/radiostatic.mp3" fadeout 1.0
-    play music "../game/assets/music/chugjug.mp3" fadein 15.0 loop
+    play music "../game/assets/music/chugjug.ogg" fadein 15.0 loop
     pause(10.0)
  
     show j_neutral at left
@@ -49,7 +49,7 @@ label scene3:
     "She switches to a different station." with text_dissolve
     stop music
     play sound "<from 2 to 4>../game/assets/music/radiostatic.mp3" fadeout 1.0
-    play music "../game/assets/music/nyancat.mp3" fadein 10.0 loop
+    play music "../game/assets/music/anime_race.ogg" fadein 10.0 loop
     pause(10.0)
 
     show s_annoyed at left
@@ -63,9 +63,9 @@ label scene3:
     with ease
 
     stop music
-    # play sound "<from 2 to 4>../game/assets/music/radiostatic.mp3" fadeout 1.0
-    # play music "../game/assets/music/nyancat.mp3" fadein 10.0 loop
-    # pause(10.0)
+    play sound "<from 2 to 4>../game/assets/music/radiostatic.mp3" fadeout 1.0
+    play music "../game/assets/music/the_alphabet.ogg" fadein 10.0 loop
+    pause(10.0)
 
     show t_annoyed at left
     with moveinleft
@@ -76,7 +76,7 @@ label scene3:
     with dict_emotion_change
 
     hide c_neutral
-
+    stop music
     c_right "Kay, that's it! No more music." with text_dissolve
 
     show t_annoyed at offscreenleft
