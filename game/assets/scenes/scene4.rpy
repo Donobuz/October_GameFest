@@ -539,6 +539,17 @@ label scene4continue:
 
     "Well [main_char], who do you think is right?" with text_dissolve
 
+    show j_annoyed at offscreenleft
+    with dict_emotion_change
+
+    menu:
+        with dissolve
+        "Jesse and Camilla":
+            jump routeA
+
+        "Tanner and Sequinn":
+            "What are you doing? This is a demo. Go with Jesse and Camillia. Besides, Tanner is kinda mean." with text_dissolve
+            jump routeA
 
 
 

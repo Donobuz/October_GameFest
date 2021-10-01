@@ -9,6 +9,8 @@ init:
     transform top_text:
         ypos 100
 
+    $ flash = Fade(.50, 0, 1.0, color="#fff")
+
 
     # Shakes the screen prefusley 
     # transform my_shake:
@@ -43,3 +45,4 @@ define dict_fade_1seconds = { "master" : Fade(0.0, 0.0, 2.0)}
 define scene_transition = Dissolve(1.0)
 define dark_forest_transition = { "master" : Dissolve(4.0) }
 define text_dissolve = Dissolve(0.25)
+define party_fade = {"master" : Fade(2.0, 0.0, 1.0)}

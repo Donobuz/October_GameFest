@@ -8,6 +8,7 @@ init python:
     main_char_pronoun_possessive = ""
     costume = ""
     beginning_choice = ""
+    routeA_scene3_choice = ""
     style.input.size = 40
 
 # positional definitions
@@ -67,10 +68,20 @@ init:
 
     image car = "../game/assets/images/backgrounds/car.png"
 
+    image forest_fog = "../game/assets/images/flashlight_minigame/forest fog.png"
+
+    image party = "../game/assets/images/Backgrounds/party.png"
+
     image my_movie = Movie(channel="movie", play="../game/assets/movie/phonebooth.mpeg")
 
     image forest_dark = "../game/assets/images/Backgrounds/forest_dark.png"
     image forest_day = "../game/assets/images/Backgrounds/forest_day.png"
+
+    image winner_panther = "../game/assets/images/Backgrounds/winner cat.jpg"
+
+    image winner_cup = "../game/assets/images/Backgrounds/winner cup.jpg"
+
+    image winner_truper = "../game/assets/images/Backgrounds/winner ranger.jpg"
 
     # MC Costumes
     image cup = "../game/assets/images/Costumes/cup.png"
@@ -82,11 +93,13 @@ init:
     image c_neutral = "../game/assets/images/Camilla/c_neutral.png"
     image c_annoyed = "../game/assets/images/Camilla/c_annoyed.png"
     image c_scared = "../game/assets/images/Camilla/c_scared.png"
+    image c_terrified = "../game/assets/images/Camilla/c_terrified.png"
 
     # Tanner Sprites
     image t_happy = "../game/assets/images/Tanner/t_happy.png"
     image t_annoyed = "../game/assets/images/Tanner/t_annoyed.png"
     image t_neutral = "../game/assets/images/Tanner/t_neutral.png"
+    image t_angry = "../game/assets/images/Tanner/t_angry.png"
 
 
     # Jesse Sprites
@@ -94,12 +107,15 @@ init:
     image j_happy = "../game/assets/images/Jesse/j_happy.png"
     image j_annoyed ="../game/assets/images/Jesse/j_annoyed.png"
     image j_angry ="../game/assets/images/Jesse/j_angry.png"
+    image j_scared = "../game/assets/images/Jesse/j_scared.png"
+    image j_terrified = "../game/assets/images/Jesse/j_terrified.png"
 
 
     # Sequinn Sprites
     image s_neutral = "../game/assets/images/Sequinn/s_neutral.png"
     image s_happy = "../game/assets/images/Sequinn/s_happy.png"
     image s_annoyed = "../game/assets/images/Sequinn/s_annoyed.png"
+    image s_angry = "../game/assets/images/Sequinn/s_angry.png"
     
 
     # character definitions
@@ -110,7 +126,7 @@ init:
     window_background="../game/assets/images/speech_bubbles/SpeechBubble_right.PNG", 
     window_ypos = gui.DialogueBox_ypos,
     what_xsize = gui.BubbleDialogue_width,
-    what_xpos = gui.rightCharacterDialogue_xpos,
+    what_xpos = 320,
     what_ypos = gui.DialogueBoxText_ypos,
     what_size = gui.DialogueBoxText_size,
     who_xpos = gui.Namebox_xpos,

@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/assets/scenes/scene4.rpy", line 384: Line is indented, but the preceding scene statement statement does not expect a block. Please check this line's indentation.
-    $ renpy.pause(5.0, hard=True)
-    ^
+File "game/assets/scenes/party.rpy", line 359: elif clause expects a non-empty block.
+    elif costume == "90's Paper Cup":
+                                     ^
+
+File "game/assets/scenes/party.rpy", line 361: expected statement.
+    else:
+        ^
 
 Ren'Py Version: Ren'Py 7.4.8.1895
-Tue Sep 28 03:58:01 2021
+Fri Oct  1 05:09:24 2021
