@@ -12,13 +12,14 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("RoughDraft")
+define config.name = _("Last One There")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
 ## this to False to hide the title.
 
-define gui.show_name = True
+# define gui.show_name = True
+define gui.show_name = False
 
 
 ## The version of the game.
@@ -37,7 +38,7 @@ define gui.about = _p("""
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "RoughDraft"
+define build.name = "LastOneThere"
 
 
 ## Sounds and music ############################################################
@@ -149,7 +150,7 @@ define config.save_directory = "RoughDraft-1632187473"
 ##
 ## The icon displayed on the taskbar or dock.
 
-define config.window_icon = "gui/window_icon.png"
+define config.window_icon = "assets/images/window_icon.png"
 
 
 ## Build configuration #########################################################

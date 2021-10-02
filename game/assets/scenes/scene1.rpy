@@ -1,6 +1,8 @@
 label scene1:
     stop music fadeout 2.2
     pause (2)
+
+    play music "assets/music/Tootsie-Pop-Blues.ogg" fadein 1.0 loop
     scene bedroom with dict_fade_4seconds
 
     "The sun shines through the window, causing you to squint as you sit up."
@@ -26,7 +28,7 @@ label scene1:
 
     "You wake up for the second time today and look at the clock." with text_dissolve
 
-    no_name "Hmm... 3:00pm, not bad for a 4 hour nap" with text_dissolve
+    no_name "Hmm... 3:00pm, not bad for a 4 hour nap." with text_dissolve
 
     "You get up for the second time today and once again make your way to the bathroom." with text_dissolve
 
@@ -35,10 +37,10 @@ label scene1:
     scene calender
     with dict_dissolve_1seconds
 
-    hide window
+    hide text
     pause 8
 
-    "You notice a big red circle surrounding the current day" with text_dissolve
+    "You notice a big red circle surrounding the current day." with text_dissolve
 
     no_name "Heh, it’s Halloween. That’s fun…" with text_dissolve
 

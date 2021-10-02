@@ -13,11 +13,16 @@ label winner:
     "Impressive that she hasn't tripped on anything considering she doesn't have the flashlight." with text_dissolve
 
     "Jesse is in front of you illuminating the path as you guys make a run for it, the light bobbing violently with each step." with text_dissolve
+    stop music fadeout 3.0
 
     "After a minute, you guys slow down to take a breather." with text_dissolve
 
     show j_scared at left
     with moveinleft
+
+
+
+    play music "../game/assets/music/suspcious.ogg" fadein 3.0 loop
 
     j_left "That was the most uncool shit I've ever had to go through." with text_dissolve
 
@@ -32,7 +37,7 @@ label winner:
     show c_scared at offscreenright
     with dict_emotion_change
 
-    "You look around, spotting a steady glow straigh ahead." with text_dissolve
+    "You look around, spotting a steady glow straight ahead." with text_dissolve
 
     "{i}Oh no... not again{/i}" with text_dissolve
 
@@ -73,12 +78,15 @@ label winner:
     with dict_ease
 
     "You and Jesse start off on a small jog going in the direction of the light." with text_dissolve
-
+    stop music fadeout 5.5
     "You come across a clearing at the end of the path, this time much bigger and brighter." with text_dissolve
+
 
     scene party with party_fade
 
     $ renpy.pause(3.0, hard=True)
+
+    play music "../game/assets/music/Jumping-For-Fun.ogg" fadein 15.0 loop
 
     "And there are other people!" with text_dissolve
 
@@ -235,9 +243,10 @@ label winner:
 
         "{b}WILL ALL  THE CONTESTANTS PLEASE GO TO THE STAGE BESIDE THE BONFIRE SO WE CAN GET THE SHOW STARTED!{/b}" with text_dissolve
 
-        show t_neutral at right
+        show t_happy at right
         with dict_emotion_change
         hide t_annoyed
+
 
         t_right "Let's support our eccentric friend first." with text_dissolve
 
@@ -247,12 +256,16 @@ label winner:
 
         j_left "You have a deal Tan Tan." with text_dissolve
 
+        show t_happy at offscreenright
+        show t_annoyed at right
+        with dict_emotion_change
+
         t_right "Watch it..." with text_dissolve
 
         mc "Glad you guys could make up but we need to go. Sequin is freaking out and they could use some reassurance." with text_dissolve
 
         show j_happy at offscreenleft
-        show t_neutral at offscreenright
+        show t_annoyed at offscreenright
         with dict_emotion_change
 
     else:
@@ -290,6 +303,10 @@ label winner:
 
     mc "I… I think they’re nervous? I’m not really sure. I’ve never seen this emotion come out of them..." with text_dissolve
 
+    show t_neutral at offscreenright
+    show t_annoyed at right
+    with dict_emotion_change
+
     t_right "Hey! I need you and your weird Furkey ass to get on the stage. Or do you want Veronica to win again?" with text_dissolve
 
     show s_angry at left
@@ -299,7 +316,7 @@ label winner:
 
     t_right "Uh... right..." with text_dissolve
 
-    show t_neutral at offscreenright
+    show t_annoyed at offscreenright
     show s_angry at offscreenleft
     with dict_emotion_change
 
@@ -349,23 +366,28 @@ label winner:
     
     if costume == "Sexy Panther":
         scene winner_panther with flash
-        "Hello World"
+
 
     elif costume == "90's Paper Cup":
         scene winner_cup with flash
-        "Hello World"
+
 
     else:
         scene winner_truper with flash
-        "Hello World"
+
 
     "You and your friends enjoy the rest of the night, feeling silly for being afraid in the first place." with text_dissolve
 
     "There was nothing to fear..." with text_dissolve
 
+    scene scrappie_bg with dissolve
+
+    stop music fadeout 5.0
+
     "Right?" with text_dissolve
 
-    # INSERT IMAGE OF SCRAPPY KILLER
+    $renpy.pause(5.0, hard = True)
+
 
     return
 
@@ -381,11 +403,16 @@ label loser:
     "Impressive that she hasn't tripped on anything considering she doesn't have the flashlight." with text_dissolve
 
     "Jesse is in front of you illuminating the path as you guys make a run for it, the light bobbing violently with each step." with text_dissolve
+    stop music fadeout 3.0
 
     "After a minute, you guys slow down to take a breather." with text_dissolve
 
     show j_scared at left
     with moveinleft
+
+
+
+    play music "../game/assets/music/suspcious.ogg" fadein 3.0 loop
 
     j_left "That was the most uncool shit I've ever had to go through." with text_dissolve
 
@@ -400,7 +427,7 @@ label loser:
     show c_scared at offscreenright
     with dict_emotion_change
 
-    "You look around, spotting a steady glow straigh ahead." with text_dissolve
+    "You look around, spotting a steady glow straight ahead." with text_dissolve
 
     "{i}Oh no... not again{/i}" with text_dissolve
 
@@ -441,12 +468,15 @@ label loser:
     with dict_ease
 
     "You and Jesse start off on a small jog going in the direction of the light." with text_dissolve
-
+    stop music fadeout 5.5
     "You come across a clearing at the end of the path, this time much bigger and brighter." with text_dissolve
+
 
     scene party with party_fade
 
     $ renpy.pause(3.0, hard=True)
+
+    play music "../game/assets/music/Jumping-For-Fun.ogg" fadein 15.0 loop
 
     "And there are other people!" with text_dissolve
 
@@ -523,7 +553,7 @@ label loser:
     t_right "That was a back route." with text_dissolve
 
     show t_neutral at offscreenright
-    show c_neutral at right
+    show c_angry at right
     with dict_emotion_change
 
     c_right "A back route?!" with text_dissolve
@@ -531,7 +561,7 @@ label loser:
     s_left "Yeah, where naturists and hunters go through for nature... and shit." with text_dissolve
 
     show s_neutral at offscreenleft
-    show c_neutral at offscreenright
+    show c_angry at offscreenright
     with dict_emotion_change
 
     "Tanner points in the opposite direction." with text_dissolve
@@ -606,9 +636,10 @@ label loser:
 
         "{b}WILL ALL  THE CONTESTANTS PLEASE GO TO THE STAGE BESIDE THE BONFIRE SO WE CAN GET THE SHOW STARTED!{/b}" with text_dissolve
 
-        show t_neutral at right
+        show t_happy at right
         with dict_emotion_change
         hide t_annoyed
+
 
         t_right "Let's support our eccentric friend first." with text_dissolve
 
@@ -618,14 +649,17 @@ label loser:
 
         j_left "You have a deal Tan Tan." with text_dissolve
 
+        show t_happy at offscreenright
+        show t_annoyed at right
+        with dict_emotion_change
+
         t_right "Watch it..." with text_dissolve
 
         mc "Glad you guys could make up but we need to go. Sequin is freaking out and they could use some reassurance." with text_dissolve
 
         show j_happy at offscreenleft
-        show t_neutral at offscreenright
+        show t_annoyed at offscreenright
         with dict_emotion_change
-
     else:
         "Just as Jesse was about to speak, the host of the costume compeition started speaking..." with text_dissolve
 
@@ -660,6 +694,10 @@ label loser:
 
     mc "I… I think they’re nervous? I’m not really sure. I’ve never seen this emotion come out of them..." with text_dissolve
 
+    show t_neutral at offscreenright
+    show t_annoyed at right
+    with dict_emotion_change
+
     t_right "Hey! I need you and your weird Furkey ass to get on the stage. Or do you want Veronica to win again?" with text_dissolve
 
     show s_angry at left
@@ -669,7 +707,7 @@ label loser:
 
     t_right "Uh... right..." with text_dissolve
 
-    show t_neutral at offscreenright
+    show t_annoyed at offscreenright
     show s_angry at offscreenleft
     with dict_emotion_change
 
@@ -715,8 +753,13 @@ label loser:
 
     "There was nothing to fear..." with text_dissolve
 
+    scene scrappie_bg with dissolve
+
+    stop music fadeout 5.0
+
     "Right?" with text_dissolve
 
-    # INSERT IMAGE OF SCRAPPY KILLER
+    $renpy.pause(5.0, hard = True)
+
 
     return

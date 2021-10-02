@@ -1,4 +1,8 @@
 label scene3:
+    stop music
+
+    play music "assets/music/skeleton_jive.ogg" fadein 3.0 loop
+
     scene car with Fade(2.0,0.0,4.0)
     "You all pile in Jesse’s minivan, which is covered in a disturbing amount of yellow fur." with text_dissolve
     "Jesse is driving with Camilla next to him in the passenger seat while you squeeze in between Sequinn’s huge costume and Tanner’s huge angst." with text_dissolve
@@ -30,20 +34,22 @@ label scene3:
 
     c_right "HEY! Let's just listen to the radio okay?" with text_dissolve
 
+
     "Camilla clicks the radio on and changes it to a station."
+    stop music
     play sound "<from 2 to 4>../game/assets/music/radiostatic.mp3" fadeout 1.0
-    play music "../game/assets/music/chugjug.ogg" fadein 15.0 loop
+    play music "<from 90 to 180>../game/assets/music/no_turning_back.mp3" fadein 15.0 loop
     pause(10.0)
  
     show j_neutral at left
-    with moveinleft
+    with dict_emotion_change
 
     j_left "Actually I don't like this song. Can you change it?" with text_dissolve
 
     c_right "Yeah, sure babe" with text_dissolve
 
     show j_neutral at offscreenleft
-    with ease
+    with dict_emotion_change
     # with dissolve
 
     "She switches to a different station." with text_dissolve
@@ -53,22 +59,22 @@ label scene3:
     pause(10.0)
 
     show s_annoyed at left
-    with moveinleft
+    with dict_emotion_change
 
     s_left "Ughhhhh... This is the worst song ever! Please change it..." with text_dissolve
 
     c_right "Alright, alright." with text_dissolve
 
     show s_annoyed at offscreenleft
-    with ease
+    with dict_emotion_change
 
     stop music
     play sound "<from 2 to 4>../game/assets/music/radiostatic.mp3" fadeout 1.0
-    play music "../game/assets/music/the_alphabet.ogg" fadein 10.0 loop
+    play music "../game/assets/music/young_summer.ogg" fadein 10.0 loop
     pause(10.0)
 
     show t_annoyed at left
-    with moveinleft
+    with dict_emotion_change
 
     t_left "Oh hell no. Not this lame music!" with text_dissolve
 
@@ -81,38 +87,57 @@ label scene3:
 
     show t_annoyed at offscreenleft
     show c_annoyed at offscreenright
-    with ease
+    with dict_emotion_change
 
     "A period of awkward silence rushes over the group" with text_dissolve
 
-    mc "{i} We've been friends for so long that we bicker like siblings. I should say something to cut the tension..." with text_dissolve
+    play music "assets/music/skeleton_jive.ogg" fadein 5.0 loop
+
+    mc "{i} We've been friends for so long that we bicker like siblings. I should say something to cut the tension...{/i}" with text_dissolve
 
     mc "Since it's Halloween, how about we share scary stories?" with text_dissolve
 
     "After a moment of consideration, everyone agrees; however, Camilla was very hesitant." with text_dissolve
 
     show s_neutral at left
-    with moveinleft
+    with dict_emotion_change
 
     s_left "Oh, I have a scary story!" with text_dissolve
 
     # $renpy.movie_cutscene("../game/assets/movie/phonebooth.mpeg")
 
-    show my_movie:
-        zoom 0.5
-    with Fade(0.0, 0.0, 4.0)
-    pause 98
-    hide s_neutral
-    hide my_movie
+    s_left "Back in the 50s there was a girl was crazy in love with some guy and he called her every Friday. Well one of those Friday’s she sits in the booth waiting for his call but it never rings." with text_dissolve
+
+    s_left "After 3 weeks of silence she decided to call him instead. But a woman answered the phone." with text_dissolve
+    s_left "Heartbroken and devastated, she wrapped the cord around her neck and slunk down onto the floor." with text_dissolve
+
+    show c_terrified at right
+    with dict_emotion_change
+
+    s_left "The next morning some girls found her, pale with the saddest look they had ever seen in her eyes." with text_dissolve
+
+    show c_terrified at offscreenright
+    show j_scared at right
+    with dict_emotion_change
+
+    s_left "Now after that no one wanted to use the booths, and a year later they removed all the phones, which is why they're just empty in my dorm." with text_dissolve
+
+    show j_scared at offscreenleft
+    show t_annoyed at right
+    with dict_emotion_change
+
+    s_left "But on every Friday at just the right time you would hear the phone ring. And if you listen closely you will hear her sobs." with text_dissolve
 
 
+    show t_annoyed at offscreenright
     show c_scared at right
-    with moveinright
+    with dict_emotion_change
 
     c_right "Quinn, you horrible monster! Why would you tell me that story!"
 
     show s_happy at left
-    with moveinleft
+    with dict_emotion_change
+    hide s_neutral
 
     s_left "Hey, it’s a pretty cool ghost story. I’ve heard the ringing too! All the way from my dorm!"
 
@@ -221,7 +246,7 @@ label scene3continue:
     
     show s_happy at offscreenleft
     show s_neutral at offscreenleft
-    show c_neutral at left
+    show c_scared at left
     with dict_emotion_change
 
     hide s_neutral
@@ -246,10 +271,6 @@ label scene3continue:
     with dict_emotion_change
 
     j_right "There's a story?" with text_dissolve
-
-    show c_scared at left
-    with dict_emotion_change
-    hide c_neutral
 
     c_left "Pleeeeease tell me it's not too spooky." with text_dissolve
 
@@ -298,21 +319,68 @@ label scene3continue:
 
     hide j_annoyed
 
-    t_left "Anyways, let me begin..." with text_dissolve
+    t_left "Anyways, let me begin... This murder was brutal." with text_dissolve
 
-    show my_movie:
-        zoom 0.5
-    with Fade(0.0, 0.0, 4.0)
-    pause 98
-    hide my_movie
+    stop music fadeout 8.0
+    play music "assets/music/the_unknown.ogg" fadein 3.0 loop
+
+    show t_neutral at offscreenright
+    scene scrappie1 with Fade(1.0,0.0,2.0)
+    
+    t_left "See, the Scrappie Killer was part of a boring little club where they talked about those stupid dolls. This guy ate, slept, breathed these things." with text_dissolve
+    scene scrappie2 with dissolve
+
+    t_left "So there was a huge opening, and our city was one of the few in the world to have an exclusive being sold in the store." with text_dissolve
+
+    scene scrappie3 with dissolve
+
+    t_left "Opening day, it’s chaos but our boy Scrappie sees the Golden Oh Golly doll surrounded by a halo of light." with text_dissolve
+
+    scene scrappie4 with dissolve
+    t_left "He's all happy and in love with it, whatever." with text_dissolve
+
+    scene scrappie5 with dissolve 
+    t_left "But then he sees something terrible." with text_dissolve
+
+    scene scrappie6 with dissolve
+    t_left "The guy that beat him for president of the scrappie club?" with text_dissolve
+
+    scene scrappie7 with dissolve
+    t_left "He got to it first." with text_dissolve
+
+    scene scrappie8 with dissolve
+    t_left "Homie was livid. I'm talking forehead veins angry.  " with text_dissolve
+
+    scene scrappie9 with dissolve
+    t_left "So the dude starts hatching a plan for revenge." with text_dissolve
+
+    scene scrappie10 with dissolve
+    t_left "He lures Prez into the woods just like his other victims. But he doesn’t kill him just yet, oh no, no, no." with text_dissolve
+
+    scene scrappie11 with dissolve
+    t_left "He drags the guy into an abandoned warehouse and skins him. Alive." with text_dissolve
+
+    scene scrappie12 with dissolve
+    t_left "Then he starts sewing pieces of fabric into the guy's muscle... Gnarly shit." with text_dissolve
+
+    scene scrappie13 with dissolve
+    t_left  "He left scraps in the wood toward the body so the police would find that prez guy and see his greatest masterpiece. The news dubbed the victim the Fraken Scrappie." with text_dissolve
+
+    stop music fadeout 2.0
+    scene car with Fade(1.0,0.0,1.0)
 
     show j_neutral at right
-    with moveinright
+    with dict_emotion_change
 
     j_right "Oh that sounds ridiculous. We would have known about it." with text_dissolve
 
+    show t_neutral at left
+    with dict_emotion_change
+
     t_left "It was in my dad's files! Besides that, they did catch the guy eventually." with text_dissolve
     t_left "Locked him up and threw away the key." with text_dissolve
+
+    play music "assets/music/skeleton_jive.ogg" fadein 3.0 loop
 
     show j_neutral at offscreenright
     show c_neutral at right
@@ -345,7 +413,7 @@ label scene3continue:
     t_left "Or is it?" with text_dissolve
 
     show j_annoyed at offscreenright
-    show c_annoyed at right
+    show c_angry at right
     with dict_emotion_change
 
     c_right "Quit it Tanner! It's not funny..." with text_dissolve
@@ -353,7 +421,7 @@ label scene3continue:
     show c_neutral at right
     with dict_emotion_change
 
-    hide c_annoyed
+    hide c_angry
     c_right "What do you think [main_char]?" with text_dissolve
 
     menu:

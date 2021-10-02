@@ -22,7 +22,7 @@ init:
     define gui.DialogueBoxText_size = 20
     define gui.DialogueBox_ypos = 650
     define gui.Namebox_xalign = 0.5
-    define gui.Namebox_ypos = 47
+    define gui.Namebox_ypos = 44
     define gui.Namebox_xpos = 402
 
 
@@ -45,8 +45,6 @@ init:
 
     #images
     image blackscreen = "../game/assets/images/blackscreen.png"
-
-    image tempbkgrd = "../game/assets/images/tempbkgrd.png"
 
     image namecard = "../game/assets/images/Backgrounds/namecard.png"
 
@@ -83,6 +81,23 @@ init:
     image winner_truper = "../game/assets/images/Backgrounds/winner ranger.jpg"
 
 
+    # Scrappie Killer
+    image scrappie1 = "../game/assets/images/Scrappie/Scrappie1.png"
+    image scrappie2 = "../game/assets/images/Scrappie/Scrappie2.png"
+    image scrappie3 = "../game/assets/images/Scrappie/Scrappie3.png"
+    image scrappie4 = "../game/assets/images/Scrappie/Scrappie4.png"
+    image scrappie5 = "../game/assets/images/Scrappie/Scrappie5.png"
+    image scrappie6 = "../game/assets/images/Scrappie/Scrappie6.png"
+    image scrappie7 = "../game/assets/images/Scrappie/Scrappie7.png"
+    image scrappie8 = "../game/assets/images/Scrappie/Scrappie8.png"
+    image scrappie9 = "../game/assets/images/Scrappie/Scrappie9.png"
+    image scrappie10 = "../game/assets/images/Scrappie/Scrappie10.png"
+    image scrappie11 = "../game/assets/images/Scrappie/Scrappie11.png"
+    image scrappie12 = "../game/assets/images/Scrappie/Scrappie12.png"
+    image scrappie13 = "../game/assets/images/Scrappie/Scrappie13.png"
+    image scrappie_bg = "../game/assets/images/Backgrounds/last_scene.png"
+
+
     # cutscenes
     image my_movie = Movie(channel="movie", play="../game/assets/movie/phonebooth.mpeg")
 
@@ -97,12 +112,14 @@ init:
     image c_annoyed = "../game/assets/images/Camilla/c_annoyed.png"
     image c_scared = "../game/assets/images/Camilla/c_scared.png"
     image c_terrified = "../game/assets/images/Camilla/c_terrified.png"
+    image c_angry = "../game/assets/images/Camilla/c_angry.png"
 
     # Tanner Sprites
     image t_happy = "../game/assets/images/Tanner/t_happy.png"
     image t_annoyed = "../game/assets/images/Tanner/t_annoyed.png"
     image t_neutral = "../game/assets/images/Tanner/t_neutral.png"
     image t_angry = "../game/assets/images/Tanner/t_angry.png"
+    image t_terrified = "../game/assets/images/Tanner/t_terrified.png"
 
 
     # Jesse Sprites
@@ -124,8 +141,8 @@ init:
     # character definitions
     define c_right = Character('Camilla', 
     color="#ffffff", 
-    who_font="../fonts/gooey.ttf", 
-    size=40, 
+    who_font="../fonts/NightAOE.ttf", 
+    size=60, 
     window_background="../game/assets/images/speech_bubbles/SpeechBubble_right.PNG", 
     window_ypos = gui.DialogueBox_ypos,
     what_xsize = gui.BubbleDialogue_width,
@@ -139,8 +156,8 @@ init:
 
     define c_left = Character('Camilla', 
     color="#ffffff", 
-    who_font="../fonts/gooey.ttf", 
-    size=40, 
+    who_font="../fonts/NightAOE.ttf", 
+    size=60, 
     window_background="../game/assets/images/speech_bubbles/SpeechBubble_left.PNG", 
     window_ypos = gui.DialogueBox_ypos,
     what_xsize = gui.BubbleDialogue_width,
@@ -154,8 +171,8 @@ init:
 
     define j_left = Character('Jesse', 
     color="#ffffff", 
-    who_font="../fonts/gooey.ttf", 
-    size=40, 
+    who_font="../fonts/NightAOE.ttf", 
+    size=60, 
     window_background = "../game/assets/images/speech_bubbles/SpeechBubble_left.png",
     window_ypos=gui.DialogueBox_ypos,
     what_xsize = gui.BubbleDialogue_width,
@@ -169,8 +186,8 @@ init:
 
     define j_right = Character('Jesse', 
     color="#ffffff", 
-    who_font="../fonts/gooey.ttf", 
-    size=40, 
+    who_font="../fonts/NightAOE.ttf", 
+    size=60, 
     window_background = "../game/assets/images/speech_bubbles/SpeechBubble_right.png",
     window_ypos=gui.DialogueBox_ypos,
     what_xsize = gui.BubbleDialogue_width,
@@ -184,8 +201,8 @@ init:
 
     define s_left = Character('Sequinn', 
     color="#ffffff", 
-    who_font="../fonts/gooey.ttf", 
-    size=40,
+    who_font="../fonts/NightAOE.ttf", 
+    size=60,
     window_background = "../game/assets/images/speech_bubbles/SpeechBubble_left.png",
     window_ypos=gui.DialogueBox_ypos,
     what_xsize = gui.BubbleDialogue_width,
@@ -199,8 +216,8 @@ init:
 
     define s_right = Character('Sequinn', 
     color="#ffffff", 
-    who_font="../fonts/gooey.ttf", 
-    size=40,
+    who_font="../fonts/NightAOE.ttf", 
+    size=60,
     window_background = "../game/assets/images/speech_bubbles/SpeechBubble_right.png",
     window_ypos=gui.DialogueBox_ypos,
     what_xsize = gui.BubbleDialogue_width,
@@ -214,8 +231,8 @@ init:
 
     define t_right = Character('Tanner', 
     color="#ffffff", 
-    who_font="../fonts/gooey.ttf", 
-    size=40,
+    who_font="../fonts/NightAOE.ttf", 
+    size=60,
     window_background="../game/assets/images/speech_bubbles/SpeechBubble_right.PNG", 
     window_ypos = gui.DialogueBox_ypos,
     what_xsize = gui.BubbleDialogue_width,
@@ -229,8 +246,8 @@ init:
 
     define t_left = Character('Tanner', 
     color="#ffffff", 
-    who_font="../fonts/gooey.ttf", 
-    size=40,
+    who_font="../fonts/NightAOE.ttf", 
+    size=60,
     window_background="../game/assets/images/speech_bubbles/SpeechBubble_left.PNG", 
     window_ypos = gui.DialogueBox_ypos,
     what_xsize = gui.BubbleDialogue_width,
@@ -244,7 +261,7 @@ init:
 
     define t_and_s = Character('Tanner and Sequinn', 
     color="#ffffff", 
-    who_font="../fonts/gooey.ttf", 
+    who_font="../fonts/NightAOE.ttf", 
     size=35,
     window_background="../game/assets/images/speech_bubbles/SpeechBubble_both.PNG", 
     window_ypos = gui.DialogueBox_ypos,
@@ -258,7 +275,7 @@ init:
 
     define t_and_j = Character('Tanner and Jesse', 
     color="#ffffff", 
-    who_font="../fonts/gooey.ttf", 
+    who_font="../fonts/NightAOE.ttf", 
     size=35,
     window_background="../game/assets/images/speech_bubbles/SpeechBubble_both.PNG", 
     window_ypos = gui.DialogueBox_ypos,
@@ -272,8 +289,8 @@ init:
 
     define mc = Character('[main_char]', 
     color="#ffffff", 
-    who_font="../fonts/gooey.ttf", 
-    size=35, 
+    who_font="../fonts/NightAOE.ttf", 
+    size=60, 
     window_background="../game/assets/images/speech_bubbles/ThoughtBubble.png", 
     window_ypos=gui.DialogueBox_ypos, 
     who_xpos=gui.innerThoughtsNameAfter_xpos, 
@@ -286,7 +303,7 @@ init:
 
     define no_name = Character("???", 
     color="#ffffff", 
-    who_font="../fonts/gooey.ttf", 
+    who_font="../fonts/NightAOE.ttf", 
     size=35, what_prefix="{i}", 
     what_suffix="{/i}", 
     window_background="../game/assets/images/speech_bubbles/ThoughtBubble.png", 
@@ -300,7 +317,8 @@ init:
     ) # Protagonist prior to naming
 
     define narrator = Character("", 
-    color="#ffffff", 
+    color="#ffffff",
+    who_font = "../fonts/NightAOE.ttf",
     window_background="../game/assets/images/speech_bubbles/SpeechBubble_narrator.png", 
     window_top_padding=45, 
     window_left_padding=40, 

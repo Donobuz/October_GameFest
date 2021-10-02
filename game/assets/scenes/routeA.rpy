@@ -66,10 +66,14 @@ label routeA:
     "Sequinn follows behind him as her feathered costume bounces with each step." with text_dissolve
     "Jesse simply shakes his head. Tanner pauses for a moment and turns around." with text_dissolve
 
-    show t_neutral at right
+    show t_angry at right
     with dict_moveinright
 
     t_right "HEY!" with hpunch
+
+    show t_angry at offscreenright
+    show t_happy at right
+    with dict_emotion_change
     t_right "Last one there is Scrappie's next victim." with text_dissolve
 
     show c_scared at left
@@ -79,7 +83,7 @@ label routeA:
 
     mc "Now, why the hell would you say that with Cami here!?" with text_dissolve
 
-    show t_neutral at offscreenright
+    show t_happy at offscreenright
     show c_scared at offscreenright
     with dict_emotion_change
 
@@ -177,9 +181,13 @@ label routeA:
 
     mc "I mean, he's not wrong. You took down the entire wrestling team by yourself. I question if you're even human sometimes." with text_dissolve
 
+    show c_scared at offscreenright
+    show c_angry at right
+    with dict_emotion_change
+
     c_right "That's not the point and they were asking for it!" with text_dissolve
 
-    show c_scared at offscreenright
+    show c_angry at offscreenright
     show j_annoyed at offscreenleft
     with dict_emotion_change
 
@@ -189,7 +197,12 @@ label routeA:
 
     mc "Soooo... Not to freak you guys out but... did you hear-..." with text_dissolve
 
+    play sound "../game/assets/music/Stampede.ogg" fadein 1.0 loop
     "All of a sudden a flury of movement charges in your direction." with text_dissolve
+
+
+    stop sound fadeout 2.0
+    
 
     show j_terrified at left
     with dict_moveinleft
@@ -295,7 +308,7 @@ label scene1A_freakout:
 
     "Maybe not the best idea but hey, that's instinct." with text_dissolve
 
-    "As soon as you turn to start running, you see that Jessee did not have the same idea and you run straight into him." with text_dissolve
+    "As soon as you turn to start running, you see that Jesse did not have the same idea and you run straight into him." with text_dissolve
 
     show j_terrified at left
     with dict_moveinleft
@@ -339,7 +352,7 @@ label scene1A_freakout:
 
     "You turn to Jesse who was supposed to be holding the flashlight." with text_dissolve
 
-    show j_neutral at left
+    show j_scared at left
     with moveinleft
 
     j_left "Guys, I don't know where the flashlight is." with text_dissolve
@@ -349,11 +362,15 @@ label scene1A_freakout:
 
     c_right "What do you mean you don't know where the flashlight is." with text_dissolve
 
+    show j_scared at offscreenleft
+    show j_annoyed at left
+    with dict_emotion_change
+
     j_left "Well, I dropped it when [main_char] ran into me and now I can't find it." with text_dissolve
 
     mc "Oh damn... my b." with text_dissolve
 
-    show j_neutral at offscreenleft
+    show j_annoyed at offscreenleft
     show c_scared at offscreenright
     with dict_emotion_change
 
@@ -364,7 +381,7 @@ label scene1A_freakout:
 
     c_right "Hey, get down here and help me!" with text_dissolve
 
-    c_right "I am {b}{i}NOT{/b}{/i} going anywhere until we get our flashlight." with text_dissolve
+    c_right "I am {b}{i}NOT{/i}{/b} going anywhere until we get our flashlight." with text_dissolve
 
     show c_scared at offscreenright
     with dict_emotion_change
@@ -403,7 +420,7 @@ label scene2_routeA:
 
     mc "The media gives them the names, not the killer himself." with text_dissolve
 
-    c_right "And any killer is a scary killer regardless of the name." with text_dissolve
+    c_right "Any killer is a scary killer regardless of the name." with text_dissolve
 
     mc "That's a good point. Killers are scary." with text_dissolve
 
@@ -447,6 +464,10 @@ label scene2_routeA:
 
     j_left "Uhhhh, no clue. But heh, Cami... you should get it for us." with text_dissolve
 
+    show c_scared at offscreenright
+    show c_terrified at right
+    with dict_emotion_change
+
     c_right "HUH?! Por qué yo? Why do I have to go?" with text_dissolve
 
     j_left "Uhhhh, cause you're the tallest and like the only athletic one here." with text_dissolve
@@ -457,7 +478,7 @@ label scene2_routeA:
 
     mc "If Jesse goes it’ll be a disaster. Do you really expect him to just climb a tree? He couldn’t even climb the jungle gym." with text_dissolve
 
-    show c_scared at offscreenright
+    show c_terrified at offscreenright
     show c_annoyed at right
     with dict_emotion_change
 
@@ -522,10 +543,15 @@ label scene2_routeA:
 label scene2A_calm:
     j_left "You know what... you're right." with text_dissolve
     j_left "Wait! This is a crazy coincidence!" with text_dissolve
+
+    show j_neutral at offscreenleft
+    show j_happy at left
+    with dict_emotion_change
+
     j_left "This is just like this scene of an anime I'm watching right now." with text_dissolve
     j_left "It's called Deserk and it's this fighty anime because you know... I eat that shit up for breakfast, lunch, and dinner." with text_dissolve
 
-    show j_neutral at offscreenleft
+    show j_happy at offscreenleft
     with dict_emotion_change
 
     "Jesse proceeds to ferociously explain in great detail the plot of the anime." with text_dissolve
@@ -593,6 +619,8 @@ label scene2A_freakout:
 
 
 label scene3_routeA:
+
+    scene forest_fog with Dissolve(3.0)
     "As you continue along the path, everyone is starting to feel restless." with text_dissolve
 
     show c_neutral at right
@@ -631,6 +659,10 @@ label scene3_routeA:
 
     j_left "No... Tanner and I got into it a few days ago over something stupid." with text_dissolve
 
+    show j_angry at left
+    show j_annoyed at offscreenleft
+    with dict_emotion_change
+
     j_left "He doesn't know how to let things go! And that's exactly why he is going the wrong way." with text_dissolve
 
     j_left "He just always has to be right!" with text_dissolve
@@ -653,8 +685,9 @@ label scene3_routeA:
             c_right "[main_char] is right. Stop acting like children and just talk to your bestie." with text_dissolve
 
             show j_neutral at left
+            show j_angry at offscreenleft
             with dict_emotion_change
-            hide j_annoyed
+
 
             j_left "Maybe you're right... I'll talk to him when we get out of these woods." with text_dissolve
 
@@ -680,7 +713,7 @@ label scene3_routeA:
 
             c_right "Oh! I know some absolutely adorable goth girls who are all for his... uhhh... vibe?" with text_dissolve
 
-            show j_annoyed at offscreenleft
+            show j_angry at offscreenleft
             show j_neutral at left
             with dict_emotion_change
 
@@ -717,7 +750,7 @@ label scene3_routeA:
             j_left "Let's just keep walking." with text_dissolve
 
             show c_neutral at offscreenright
-            show j_annoyed at offscreenleft
+            show j_angry at offscreenleft
             with dict_emotion_change
 
             hide text
@@ -802,7 +835,7 @@ label scene3A_freakout:
     show j_neutral at left
     with moveinleft
 
-    j_left "awwww, come on. Don't you all trust me?" with text_dissolve
+    j_left "Awwww, come on. Don't you all trust me?" with text_dissolve
 
     mc "Sorry Jesse. I’m with Cami on this one. Don’t want to risk anything happening." with text_dissolve
 
@@ -872,7 +905,7 @@ label scene3A_calm:
 
     "Camilla hesitates for another moment, seeming to consider options." with text_dissolve
 
-    show c_neutral at right
+    show c_annoyed at right
     with moveinright
 
     c_right "If [main_char] says so then I guess I can't argue. I'll trust your judgement on this since you also looked at the map." with text_dissolve
@@ -888,7 +921,7 @@ label scene3A_calm:
 
     j_left "Just trust me! Nyan~" with text_dissolve
 
-    show c_neutral at offscreenright
+    show c_annoyed at offscreenright
     show j_neutral at offscreenleft
     with dict_emotion_change
 
@@ -920,11 +953,15 @@ label scene4_routeA:
     c_right "I don't care about winning or losing. I just want to get out of these scary woods before I end up attacked by spiders next!" with text_dissolve
 
     mc "You’ll be lucky if a spider even wants to be near you with you freaking out every 10 seconds." with text_dissolve
+    
+    show c_neutral at offscreenright
+    show c_annoyed at right
+    with dict_emotion_change
 
     c_right "Hey fun fact... Shut up." with text_dissolve
 
     show j_neutral at offscreenleft
-    show c_neutral at offscreenright
+    show c_annoyed at offscreenright
     with dict_emotion_change
 
     "You and your friends laugh and talk as you make your way through the woods. Though dark and foggy, you’re enjoying your walk, joking around with Camilla and Jesse." with text_dissolve
@@ -973,6 +1010,10 @@ label scene5_routeA:
 
     j_left "OoOoOoO... they'll go for your thighs first." with text_dissolve
 
+    show c_scared at offscreenright
+    show c_terrified at right
+    with dict_emotion_change
+
     c_right "How?! Why?!?" with text_dissolve
 
     j_left "Hahaha! That's what I would do." with text_dissolve
@@ -980,7 +1021,7 @@ label scene5_routeA:
     c_right "Come on. Let's go! I will not become a 5-Star meal." with text_dissolve
 
     show j_happy at offscreenleft
-    show c_scared at offscreenright
+    show c_terrified at offscreenright
     show j_annoyed at offscreenleft
     with dict_emotion_change
 
@@ -1003,7 +1044,7 @@ label scene5_routeA:
 
     c_right "Shhhhhhh! Keep it down!" with text_dissolve
 
-    "She pushes both you and Jesse to a crouching position. You crane you head to the direction she's pointing to." with text_dissolve
+    "She pushes both you and Jesse to a crouching position. You crane your head to the direction she's pointing to." with text_dissolve
 
     c_right "O-o-over there... a light... floating?" with text_dissolve
 
@@ -1019,7 +1060,9 @@ label scene5_routeA:
 
     play sound "assets/music/ghost_scream.ogg" volume 0.75
 
-    $ renpy.pause (0.20, hard = True)
+    $ renpy.pause (1.5, hard = True)
+
+    stop sound fadeout 2.0
 
     show j_terrified at left
     show c_terrified at right
@@ -1050,9 +1093,13 @@ label scene5_routeA:
     show j_terrified at left
     with moveinleft
 
-    play sound "assets/music/digitalscream.ogg" volume 0.5
+    play sound "assets/music/digitalscream.ogg"
+    stop music fadeout 3.0
     
     j_left "You pissed it off!" with text_dissolve
+
+
+    play music "../game/assets/music/Fright-Fest.ogg" fadein 3.0 loop
 
     show c_terrified at right
     with moveinright
@@ -1107,6 +1154,8 @@ label scene5A_calm:
 
 label scene5A_freakout:
     "You and your friends duck behind some foliage, hoping that the danger would pass." with text_dissolve
+
+    $ renpy.pause (3.0, hard = True)
 
     show c_terrified at right
     with moveinright

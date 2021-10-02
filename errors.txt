@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/assets/scenes/party.rpy", line 359: elif clause expects a non-empty block.
-    elif costume == "90's Paper Cup":
-                                     ^
-
-File "game/assets/scenes/party.rpy", line 361: expected statement.
-    else:
-        ^
+File "game/assets/scenes/scene4.rpy", line 387: expected end of line
+    stop music with fadeout 2.0
+               ^
 
 Ren'Py Version: Ren'Py 7.4.8.1895
-Fri Oct  1 05:09:24 2021
+Fri Oct  1 18:59:23 2021

@@ -1,6 +1,10 @@
 label scene4:
+    stop music fadeout 2.5
+    
     scene forest_day with Fade(1.0,0.0,1.0)
-    "Camilla peaks her head out of the window"
+    "Camilla peaks her head out of the window."
+
+    play music "assets/music/the_woods.ogg" fadein 5.0 loop
     show c_neutral at right
     with moveinright
 
@@ -13,7 +17,7 @@ label scene4:
 
     c_right "You're ABSOLUTELY sure this is the right place?" with text_dissolve
 
-    "Jesse grabs a few things as he gets out of the van" with text_dissolve
+    "Jesse grabs a few things as he gets out of the van." with text_dissolve
 
     j_left "I'm like 99%% sure we're at the right place. Just gotta walk a little and we'll be there." with text_dissolve
 
@@ -74,7 +78,7 @@ label scene4:
     show t_neutral at right
     with dict_moveinright
 
-    t_right "Hey man, no one told me to bring it so I didn't" with text_dissolve
+    t_right "Hey man, no one told me to bring it so I didn't." with text_dissolve
 
     show t_neutral at offscreenright
     with dict_ease
@@ -105,7 +109,7 @@ label scene4:
 label scene4A:
 
     "You may or may not have forgotten the map." with text_dissolve
-    mc "uhhh... So I may or may not have forgotten the map" with text_dissolve
+    mc "uhhh... So I may or may not have forgotten the map." with text_dissolve
 
     show s_annoyed at left
     with moveinleft
@@ -247,7 +251,7 @@ label scene4B:
     with dict_ease
 
     "Jesse leaves on his quest for a marker." with text_dissolve
-    "With Jesse walking away, your attention goes back to your bickering friends" with text_dissolve
+    "With Jesse walking away, your attention goes back to your bickering friends." with text_dissolve
 
     "Tanner found a fake spider and is chasing Camilla with it." with text_dissolve
 
@@ -298,7 +302,7 @@ label scene4continue:
     show map_image at map_transform
     with dict_dissolve_1seconds
 
-    mc "But I will show you" with text_dissolve
+    mc "But I will show you." with text_dissolve
 
     hide map_image
 
@@ -320,7 +324,7 @@ label scene4continue:
     hide c_scared
 
     show s_annoyed at right
-    with dict_moveinright
+    with dict_emotion_change
 
     s_right "iS tHe MaP oKaY?" with text_dissolve
 
@@ -366,9 +370,9 @@ label scene4continue:
 
     t_left "I hate walking." with text_dissolve
 
-    "You roll your eyes" with text_dissolve
+    "You roll your eyes." with text_dissolve
 
-    mc "You hate everything Tanner" with text_dissolve
+    mc "You hate everything Tanner." with text_dissolve
 
     "Tanner just shrugs nonchalantly." with text_dissolve
 
@@ -380,9 +384,15 @@ label scene4continue:
     "You take up the center of the group." with text_dissolve
     "Sequinn and Tanner are in the back. Sequinn tries to show Tanner the cool feature of their costume but he is very uninterested." with text_dissolve
 
+    stop music fadeout 3.0
+
+
+
     scene forest_dark with dark_forest_transition
     "The cold and encroaching darkness has started to take effect on your group." with text_dissolve
+    play music "assets/music/suspcious.ogg" fadein 3.0 loop 
     $ renpy.pause(2.0, hard=True)
+    
 
     "After walking a bit, the party encounters a fork on the trail." with text_dissolve
 
@@ -502,7 +512,7 @@ label scene4continue:
 
     j_left "I’m not the one who was goofing off and causing accidents. I'm pretty sure it's this path." with text_dissolve
 
-    t_right "Tch. Pretty sure isn't good enough for me. I think it's the other way" with text_dissolve
+    t_right "Tch. Pretty sure isn't good enough for me. I think it's the other way." with text_dissolve
 
     show j_angry at offscreenleft
     show t_annoyed at offscreenright

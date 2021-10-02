@@ -50,7 +50,7 @@ label confirm_truper:
     menu:
         "Sexy AF":
             hide text
-            $costume = "Super Truperz"
+            $costume = "Super Truper"
             jump namecard
 
         "Not It":

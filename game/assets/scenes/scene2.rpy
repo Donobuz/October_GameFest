@@ -77,7 +77,7 @@ label scene2:
     show t_neutral at right
     with moveinright
 
-    t_right "WELLLL ANYWAYS, I am a Bat Guy's trusty sidekick... the Somber Tit" with text_dissolve
+    t_right "WELLLL ANYWAYS, I am a Bat Guy's trusty sidekick... the Somber Tit." with text_dissolve
 
     show s_neutral at offscreenleft
     with ease
@@ -88,7 +88,7 @@ label scene2:
     show j_neutral at left
     with moveinleft
 
-    j_left "Hey I’ve read every Bat Guy and Tit comic, including side stories, and there is no Somber Tit in any alternate universe" with text_dissolve
+    j_left "Hey I’ve read every Bat Guy and Tit comic, including side stories, and there is no Somber Tit in any alternate universe." with text_dissolve
 
     show t_annoyed at right
     with dissolve
@@ -106,7 +106,7 @@ label scene2:
     show c_neutral at right
     with moveinright
 
-    c_right "That was the cringiest thing I have ever listened to... I'm Tommy Hurrah. We're both super sexy" with text_dissolve
+    c_right "That was the cringiest thing I have ever listened to... I'm Tommy Hurrah. We're both super sexy." with text_dissolve
 
     show j_happy at left
     with dissolve
@@ -126,12 +126,12 @@ label scene2:
     show s_neutral at left
     with moveinleft
 
-    "Sequinn looks at you" with text_dissolve
+    "Sequinn looks at you." with text_dissolve
     # "Sequinn looks to you"
 
     s_left "And what the hell are you supposed to be [main_char]?" with text_dissolve
 
-    mc "I'm a [costume] obviously" with text_dissolve
+    mc "I'm a [costume] obviously!" with text_dissolve
 
     # python:
     #     if costume == "Sexy Panther":
@@ -208,7 +208,7 @@ label super_truper:
     show j_neutral at left
     with moveinleft
 
-    j_left "While I appreciate the attempt, your Super TruperZ helmet has too many stripes and there is no Purple Truper." with text_dissolve
+    j_left "While I appreciate the attempt, your Super Truper helmet has too many stripes and there is no Purple Truper." with text_dissolve
 
     mc "I did not wake up from my second sleep to be attacked." with text_dissolve
 
@@ -234,12 +234,12 @@ label scene2continue:
     show c_annoyed at right
     with moveinright
 
-    c_right "Tanner, don't be a jerk" with text_dissolve
+    c_right "Tanner, don't be a jerk." with text_dissolve
 
     show c_happy at right
     with dict_dissolve_1seconds
 
-    "She turns to you with a warm smile"
+    "She turns to you with a warm smile."
 
     c_right  "Let me get you a coffee then we can hit the road!" with text_dissolve
 
@@ -252,7 +252,7 @@ label scene2continue:
 
     "Camilla walks into the coffee shop." with text_dissolve
 
-    "With the plastic wig on top of her already tall frame, she has to duck to get through the door" with text_dissolve
+    "With the plastic wig on top of her already tall frame, she has to duck to get through the door." with text_dissolve
 
     hide c_happy
     hide c_annoyed
@@ -294,13 +294,13 @@ label scene2continue:
 
     show t_annoyed at left
     with dict_hpunch
-    play sound "assets/music/turkey_win.mp3" volume .75 #Edit this later
+    play sound "assets/music/turkey_win.mp3"  #Edit this later
 
     $ renpy.pause(1.5, hard = True)
     
-    "The loud noise causes everyone to jump and cover their ears" with text_dissolve
+    "The loud noise causes everyone to jump and cover their ears." with text_dissolve
     
-    mc "Well, that definitely caught everyone off guard" with text_dissolve
+    mc "Well, that definitely caught everyone off guard." with text_dissolve
 
     show s_happy at right
     with dict_emotion_change
@@ -312,7 +312,7 @@ label scene2continue:
     with dissolve
 
 
-    t_left "You say that every year but it hasn't happened yet" with text_dissolve
+    t_left "You say that every year but it hasn't happened yet." with text_dissolve
 
     show s_neutral at offscreenright
     show s_happy at offscreenright
@@ -366,7 +366,7 @@ label scene2continue:
     with dict_emotion_change
     hide c_neutral
 
-    c_left "We're just teasing you babe"
+    c_left "We're just teasing you babe."
 
     show c_happy at offscreenright
     with dict_emotion_change
@@ -378,7 +378,7 @@ label scene2continue:
 
     t_left "I'm not. You're a certified loser." with text_dissolve
 
-    show t_annoyed at left
+    show t_terrified at left
     with dict_emotion_change
     hide t_happy
     "You hear a loud smack." with hpunch
@@ -396,12 +396,12 @@ label scene2continue:
 
     j_right "That’s enough out of you!" with text_dissolve
 
-    show t_annoyed at offscreenleft
+    show t_terrified at offscreenleft
     show j_annoyed at offscreenright
     with ease
     # with dissolve
  
-    "As the drama continues in the background, you look at Camilla who quickly looks down at her watch" with text_dissolve
+    "As the drama continues in the background, you look at Camilla who quickly looks down at her watch." with text_dissolve
 
     show c_happy at right
     with moveinright
